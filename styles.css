@@ -1,0 +1,163 @@
+/* frontend/style.css */
+body {
+    font-family: 'Times new roman',  sans-serif; /* Fuente un poco más moderna */
+    background: #e3f2fd; /* Fondo azul claro existente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Usa min-height para que el contenido pueda crecer */
+    margin: 0; /* Elimina márgenes por defecto del body */
+    padding: 20px; /* Agrega un padding general para que el contenido no pegue a los bordes */
+    box-sizing: border-box; /* Incluye padding y border en el ancho/alto total */
+    overflow-x: hidden; /* <-- AÑADE ESTA LÍNEA */
+}
+
+/* Contenedor principal de la página (login/dashboard) */
+.container {
+    background: white;
+    padding: 4rem; /* Aumenta el padding para más espacio interno */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada para un efecto 3D */
+    width: 100%; /* Permite que ocupe el 100% del espacio disponible de su padre */
+    max-width: 800px; /* <--- AUMENTA ESTE VALOR para que el formulario sea más ancho */
+    text-align: center;
+    box-sizing: border-box; /* Asegura que el padding no añada ancho extra */
+    margin: 20px auto;
+}
+
+/* Estilos para los títulos h2 */
+h2 {
+    color: #439dcd; /* Un color más vibrante para los títulos */
+    margin-bottom: 0.5 rem; /* Más espacio debajo del título */
+}
+h1 {
+    color: #1e9a58; /* Un color más vibrante para los títulos */
+    margin-bottom: 1rem; /* Más espacio debajo del título */
+    font-family: 'Times New Roman',  sans-serif; 
+}
+
+/* Contenedor del formulario */
+.formulario {
+    margin-top: 1.5rem; /* Más espacio arriba del formulario */
+    display: flex;
+    flex-direction: column;
+    gap: 9px; /* <--- Usa gap para espacio entre los elementos del formulario */
+}
+
+input {
+    padding: 12px 15px; /* Más padding para los inputs */
+    margin-bottom: 0; /* Ya usamos gap en el formulario */
+    border: 1px solid #b0bec5; /* Borde un poco más suave */
+    border-radius: 8px;
+    font-size: 1rem; /* Asegura un tamaño de fuente legible */
+    transition: border-color 0.3s ease; /* Transición suave al enfocar */
+}
+
+input:focus {
+    outline: none; /* Quita el contorno feo por defecto */
+    border-color: #0288d1; /* Resalta el borde al enfocar */
+    box-shadow: 0 0 5px rgba(2, 136, 209, 0.5); /* Pequeña sombra al enfocar */
+}
+
+/* Estilo para las etiquetas (si las tienes, que es recomendado) */
+label {
+    text-align: left; /* Alinea las etiquetas a la izquierda */
+    margin-bottom: 5px; /* Espacio debajo de la etiqueta */
+    font-weight: bold;
+    color: #333;
+}
+
+button {
+    background: #5a9462;
+    color: white;
+    padding: 12px 18px; /* Más padding para los botones */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 12px; /* Más espacio arriba del botón */
+    font-size: 1rem; /* Tamaño de fuente más grande para los botones */
+    transition: background 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+}
+
+
+button:hover {
+    background: #579fc9;
+    transform: translateY(-2px); /* Pequeño efecto de elevación al pasar el mouse */
+}
+
+button:active {
+    transform: translateY(0); /* Vuelve a la posición normal al hacer clic */
+}
+
+/* Clases de utilidad */
+.hidden {
+    display: none;
+}
+
+.form-toggle {
+    display: flex;
+    justify-content: center; /* Centra los botones de alternar */
+    gap: 15px; /* Espacio entre los botones de alternar */
+    margin-top: 2rem; /* Más espacio arriba de los botones de alternar */
+}
+
+.form-toggle button {
+    background: #a1caa3; /* Un color diferente para los botones de alternar */
+}
+
+.form-toggle button:hover {
+    background: #a4dca7;
+}
+
+/* Estilos para mensajes de error o éxito */
+.message {
+    margin-top: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.message.error {
+    background-color: #ffcdd2;
+    color: #c62828;
+}
+
+.message.success {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+}
+
+/* Estilos para la tabla en dashboard.html (si aplica) */
+.table-container {
+    margin-top: 2rem;
+    overflow-x: auto; /* Permite scroll horizontal en tablas grandes */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden; /* Asegura que border-radius se aplique a los bordes de la tabla */
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eceff1;
+}
+
+th {
+    background-color: #0288d1;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+tr:hover {
+    background-color: #e1f5fe; /* Resalta la fila al pasar el mouse */
+}
+
