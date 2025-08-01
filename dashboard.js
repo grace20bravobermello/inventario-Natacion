@@ -1,5 +1,5 @@
-// URLs de tu API de backend
-const API_URL = 'http://localhost:3000/api'; // Asegúrate de que este sea el puerto correcto de tu backend
+
+const API_URL = 'http://localhost:3000/api';
 
 // 1. Verificar autenticación al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!token) {
         // Si no hay token, redirigir al login
         alert('No autorizado. Por favor, inicia sesión.');
-        window.location.href = 'index.html'; // Cambia a la URL de tu página de login
+        window.location.href = 'index.html'; 
     } else {
         // Si hay token, cargar los productos
         cargarProductos();
@@ -108,12 +108,11 @@ async function guardarProducto(event) {
 
     const productoId = document.getElementById('productoId').value;
     // === CORRECCIÓN DE IDS AQUÍ ===
-    const nombre = document.getElementById('nombre').value; // CAMBIO: de 'nombreProducto' a 'nombre'
-    const descripcion = document.getElementById('descripcion').value; // CAMBIO: de 'descripcionProducto' a 'descripcion'
-    const stock = parseInt(document.getElementById('stock').value); // CAMBIO: de 'stockProducto' a 'stock'
-    const preciounitario = parseFloat(document.getElementById('preciounitario').value); // CAMBIO: de 'precioUnitarioProducto' a 'preciounitario'
-    // =============================
-
+    const nombre = document.getElementById('nombre').value; 
+    const descripcion = document.getElementById('descripcion').value; 
+    const stock = parseInt(document.getElementById('stock').value); 
+    const preciounitario = parseFloat(document.getElementById('preciounitario').value); 
+    
     // Validación básica de campos
     if (!nombre || !descripcion || isNaN(stock) || isNaN(preciounitario)) {
         alert('Por favor, completa todos los campos correctamente.');
@@ -248,7 +247,7 @@ async function editarProducto(id) {
             const precioString = String(producto.preciounitario).replace(',', '.');
             const precioNumerico = parseFloat(precioString);
             if (!isNaN(precioNumerico)) {
-                precioParaInput = precioNumerico; // No usar toFixed aquí para permitir edición precisa
+                precioParaInput = precioNumerico; 
             }
         }
         document.getElementById('preciounitario').value = precioParaInput;
@@ -264,4 +263,4 @@ async function editarProducto(id) {
         alert('Error al cargar el producto para editar: ' + error.message);
     }
 }
-window.editarProducto = editarProducto; // Asegúrate de que siga siendo global
+window.editarProducto = editarProducto; 
