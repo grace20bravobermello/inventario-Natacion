@@ -19,9 +19,9 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada para un efecto 3D */
     width: 100%; /* Permite que ocupe el 100% del espacio disponible de su padre */
-    max-width: 800px; /* <--- AUMENTA ESTE VALOR para que el formulario sea más ancho */
+    max-width: 800px; 
     text-align: center;
-    box-sizing: border-box; /* Asegura que el padding no añada ancho extra */
+    box-sizing: border-box; 
     margin: 20px auto;
 }
 
@@ -41,7 +41,7 @@ h1 {
     margin-top: 1.5rem; /* Más espacio arriba del formulario */
     display: flex;
     flex-direction: column;
-    gap: 9px; /* <--- Usa gap para espacio entre los elementos del formulario */
+    gap: 9px; 
 }
 
 input {
@@ -89,7 +89,6 @@ button:active {
     transform: translateY(0); /* Vuelve a la posición normal al hacer clic */
 }
 
-/* Clases de utilidad */
 .hidden {
     display: none;
 }
