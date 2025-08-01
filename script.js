@@ -1,6 +1,6 @@
 // frontend/script.js
 
-const API_URL = 'http://localhost:3000/api'; // cambia si usas ngrok
+const API_URL = 'http://localhost:3000/api'; 
 
 function mostrarLogin() {
   document.getElementById('loginForm').classList.remove('hidden');
@@ -56,7 +56,7 @@ async function loginUsuario(e) {
     if (res.ok && data.token) {
       localStorage.setItem('token', data.token);
       alert('Inicio de sesión exitoso');
-      window.location.href = 'dashboard.html'; // vamos a crearla luego
+      window.location.href = 'dashboard.html'; 
     } else {
       alert(data.message || 'Credenciales inválidas');
     }
