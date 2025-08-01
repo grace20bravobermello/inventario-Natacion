@@ -1,5 +1,5 @@
 // backend/config/db.js
-import 'dotenv/config'; // <-- ¡IMPORTANTE: Asegúrate de que tu package.json tenga "type": "module" para usar import/export!
+import 'dotenv/config'; 
 
 import pkg from 'pg';
 const { Pool } = pkg;
