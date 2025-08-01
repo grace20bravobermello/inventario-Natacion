@@ -30,7 +30,7 @@ export const registrarUsuario = async (req, res) => {
         res.status(201).json({ token, usuario: nuevo.rows[0] });
     } catch (err) {
         // Este catch capturará errores de conexión a la DB también
-        console.error('Error en registrarUsuario:', err.stack); // Usar err.stack para más detalles
+        console.error('Error en registrarUsuario:', err.stack); 
         res.status(500).json({ mensaje: 'Error en el servidor al registrar usuario', error: err.message });
     }
 };
@@ -65,7 +65,7 @@ export const loginUsuario = async (req, res) => {
         console.log('Login exitoso para:', email);
         res.status(200).json({ token, usuario });
     } catch (err) {
-        console.error('Error CRÍTICO en loginUsuario:', err.stack); // ¡err.stack para ver la pila completa!
+        console.error('Error CRÍTICO en loginUsuario:', err.stack); 
         res.status(500).json({ mensaje: 'Error al iniciar sesión', error: err.message });
     }
 };
