@@ -1,6 +1,6 @@
 /* frontend/style.css */
 body {
-    font-family: 'Times new roman',  sans-serif; /* Fuente un poco más moderna */
+    font-family: 'Times new roman',  sans-serif; 
     background: #e3f2fd; /* Fondo azul claro existente */
     display: flex;
     justify-content: center;
