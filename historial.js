@@ -1,5 +1,5 @@
 // frontend/historial.js
-const API_URL = 'http://localhost:3000/api'; // Asegúrate de que esta URL sea correcta
+const API_URL = 'http://localhost:3000/api'; 
 const token = localStorage.getItem('token');
 
 // Redirigir si no hay token (usuario no autenticado)
@@ -14,7 +14,7 @@ const tablaHistorial = document.getElementById('tablaHistorial');
  */
 async function cargarHistorial() {
   try {
-    const res = await fetch(`${API_URL}/movimientos`, { // Asumiendo un endpoint /movimientos en tu backend
+    const res = await fetch(`${API_URL}/movimientos`, { 
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -59,8 +59,3 @@ async function cargarHistorial() {
 // Cargar el historial al cargar la página
 cargarHistorial();
 
-// La función cerrarSesion ya está definida en script.js, que se incluye en historial.html
-// function cerrarSesion() {
-//   localStorage.removeItem('token');
-//   window.location.href = 'index.html';
-// }
