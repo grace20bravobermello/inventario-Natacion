@@ -1,13 +1,11 @@
 // backend/controllers/productosController.js
-// NO USAR Sequelize aquí, solo el pool de PostgreSQL
-import pool from '../config/db.js'; // Asegúrate que la ruta sea correcta
+import pool from '../config/db.js'; 
 
 // Crear producto
 export const crearProducto = async (req, res) => {
     try {
         const { nombre, descripcion, preciounitario, stock } = req.body;
-        // La columna 'preciototal' es generada, así que NO la incluyas en el INSERT.
-        // Asegúrate que preciounitario esté en formato de punto si viene con coma
+        
         const formattedPreciounitario = String(preciounitario).replace(',', '.');
 
         const result = await pool.query(
