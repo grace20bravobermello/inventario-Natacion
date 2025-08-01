@@ -1,8 +1,4 @@
 // backend/server.js
-
-
-// 1. IMPORTS NECESARIOS
-
 import 'dotenv/config'; // Para cargar las variables de entorno
 import express from 'express'; // El framework Express
 import cors from 'cors'; // Para permitir solicitudes desde el frontend
@@ -12,13 +8,10 @@ import authRoutes from './routes/authRoutes.js';
 import productosRoutes from './routes/productosRoutes.js';
 
 
-// No necesitas importar loginUsuario directamente aquí si ya lo usas en authRoutes
-// import { loginUsuario } from './controllers/authController.js'; // <--- Puedes eliminar esta línea
-
 // 2. INICIALIZAR LA APLICACIÓN DE EXPRESS
 const app = express();
 
-// 3. MIDDLEWARES GLOBALES (¡ESTOS DEBEN IR ANTES DE CUALQUIER RUTA!)
+// 3. MIDDLEWARES GLOBALES 
 app.use(cors()); // Habilita CORS para todas las solicitudes
 app.use(express.json()); // Middleware para parsear el cuerpo de las solicitudes como JSON
 
